@@ -1,0 +1,38 @@
+\chapter{使用说明}
+
+
+\section{文件组织结构}
+\begin{description}
+\item[main.tex] 主文档；
+\item[mainref.bib] BibTeX格式的参考文献数据；
+\item[bstutf8.bst] 参考文献样式，不需要修改；
+\item[content] 存放摘要、各章节及谢辞等文档的目录；
+\item[figures] 存放论文中插入的图片的目录。
+\end{description}
+\section{使用前准备}
+在使用本模板编译\LaTeX 文档之前，需安装以下软件：
+\begin{itemize}
+
+\item{\bf texlive 2020} 本模板基于texlive 2020包含的CTeX宏包编写，无法保证能在更早期的版本上编译。可以从\url{http://tug.org/texlive/}下载安装。
+\end{itemize}
+
+还需要掌握\LaTeX 基础知识。可阅读《一份不太简短的\LaTeX 介绍》（\url{http://www.latexstudio.net/archives/6058}），或购买刘海洋编著的《\LaTeX 入门》,或胡伟的《\LaTeXe 完全学习手册》。
+
+\section{编译说明}
+需要对主文档执行四次编译，通过 xelatex + bibtex + xelatex + xelatex 生成带有完整目录和参考文献信息的 PDF 文件。
+
+\section{查重须知}
+知网查重仅需要正文和参考文献，可注释掉无关的包含文件代码后编译。必要时可使用pandoc（\url{http://www.pandoc.org/}）将\LaTeX 文档 转换为word文档以供查重之用。
+
+\section{后续更新}
+由于水平有限，目前本模板仅为一个demo，尚有多项工作未完成，希望有志同道合的校友共同完成此模板。
+
+\section{已知问题}
+\begin{itemize}
+	\item[1)] 目录页：目录较少时，多出空白页，同级目录较多时，存在对齐问题。
+	\item[2)] 跨页对齐存在问题。
+	\item[3)] 攻读学位期间学术成果未完成格式设计，需要手动设置格式。
+	\item[4)] 封面间距设计随意，大多为了美观。
+	\item[5)] 学校一共给出了6类硕士毕业论文规范，本模板仅有一类（实际上差异很小，略加改动即可）。
+	
+\end{itemize}

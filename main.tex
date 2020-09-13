@@ -1,0 +1,21 @@
+% !Mode:: "TeX:UTF-8"
+%% 请使用 XeLaTeX 编译本文.
+% \documentclass{QDUBachelor}% 此行生成带彩色链接的文档. 选项 forprint: 交付打印时添加, 避免彩色链接字迹打印偏淡.
+\documentclass[forprint]{QDUBachelor}
+\begin{document}
+\frontmatter
+\include{content/cover}
+%\declaration
+\include{content/abstr}
+\emptystyles
+\setcounter{page}{1}
+\tableofcontents
+\mainmatter
+\restorestyles
+\include{content/chap1}
+\include{content/chap2}
+\include{content/thanks}
+\reference{mainref}
+\include{content/appdx}
+\include{content/researcher}
+\end{document}
