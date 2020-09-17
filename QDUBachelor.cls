@@ -3,7 +3,7 @@
 \ProvidesClass{QDUBachelor}[2020.8.3 1.0 Qingdao University Thesis Template for Master Degree]
 
 %twoside -双面 openany -新章节可在偶数页开始
-\LoadClass[twoside,openany,zihao=-4,UTF8]{ctexbook}
+\LoadClass[oneside,openany,zihao=-4,UTF8]{ctexbook}
 
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{ctexbook}}
@@ -21,7 +21,7 @@
 \fi
 
 \RequirePackage{fancyhdr}
-\RequirePackage[a4paper,centering,left=3.1cm,right=2.6cm,top=2.6cm,bottom=2.6cm,headheight=2.5cm,footskip=2cm]{geometry} %页面设置
+\usepackage{layout}
 %\RequirePackage{wallpaper} %用于封面元素对齐
 \RequirePackage{makecell}
 \RequirePackage{array} %绘制封面下划线
@@ -127,6 +127,7 @@
   extendedchars=false,columns=flexible
   % numbersep=-1em
 }
+\RequirePackage[a4paper,centering,verbose,left=3.1cm,right=2.6cm,top=2.6cm,bottom=2.6cm,headheight=2.5cm,footskip=2cm]{geometry} %页面设置
 %------------------------ cover ------------------------
 \def\maketitle {
     \begin{titlepage}
