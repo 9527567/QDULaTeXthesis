@@ -19,7 +19,7 @@
  \else
 \hypersetup{colorlinks,linkcolor=blue,anchorcolor=green,citecolor=magenta}
 \fi
-
+\usepackage{anyfontsize}
 \RequirePackage{fancyhdr}
 \usepackage{layout}
 %\RequirePackage{wallpaper} %用于封面元素对齐
@@ -115,8 +115,8 @@
   breaklines=true, %对过长的代码自动换行
   breakautoindent=true,%
   breakindent=4em, %
-  escapechar=`,
-  escapebegin=\begin{CJK*}{GBK}{hei},escapeend=\end{CJK*},
+  escapechar=``,
+  escapebegin=\begin{CJK*}{GBK}{SimSum},escapeend=\end{CJK*},
   aboveskip=1em, %代码块边框
   %% added by http://bbs.ctex.org/viewthread.php?tid=53451
   fontadjust,
@@ -152,13 +152,13 @@
         \begin{tabular}{ b{3cm} >{\arraybackslash}b{7cm}}
             \songti \zihao{-3}  {作者姓名：} & \makecell[c]{\songti \zihao{-3} \the\name} \\[-2pt]
             \Xcline{2-2}{1pt} \\[0.1cm]
-            \songti \zihao{-3}  \textbf{指导教师：} & \makecell[c]{\songti \zihao{-3} \the\supervisor} \\[-2pt]
+            \songti \zihao{-3}  {指导教师：} & \makecell[c]{\songti \zihao{-3} \the\supervisor} \\[-2pt]
             \Xcline{2-2}{1pt} \\[0.1cm]
-            \songti \zihao{-3} \ziju{2} \textbf{学科：} & \makecell[c]{\songti \zihao{-3} \the\major} \\[-2pt]
+            \songti \zihao{-3} \ziju{2} {学科：} & \makecell[c]{\songti \zihao{-3} \the\major} \\[-2pt]
             \Xcline{2-2}{1pt} \\[0.1cm]
-            \songti \zihao{-3}  \textbf{培养单位：} & \makecell[c]{\songti \zihao{-3}\the\school} \\[-2pt]
+            \songti \zihao{-3}  {培养单位：} & \makecell[c]{\songti \zihao{-3}\the\school} \\[-2pt]
             \Xcline{2-2}{1pt} \\[0.1cm]
-            \songti \zihao{-3} \textbf{答辩日期：} & \makecell[c]{\songti \zihao{-3} \the\date} \\[-2pt]
+            \songti \zihao{-3} {答辩日期：} & \makecell[c]{\songti \zihao{-3} \the\date} \\[-2pt]
             \Xcline{2-2}{1pt} \\[0.1cm]
         \end{tabular}
     }
@@ -206,13 +206,13 @@
 \newenvironment{abstractEn}[1]{
     \thispagestyle{empty}
     \vspace*{1cm}
-    \centerline{\heiti \zihao{3} \textbf{Abstract}}
+    \centerline{\heiti \zihao{3} \bf{Abstract}}
     \vspace{1.2cm}
     \keyword{#1}
 }{
     \\
     \vfill
-    \noindent \textbf{Keywords} \varKeyword
+    \noindent \bf{Keywords} \varKeyword
     \clearpage
 }
 
@@ -244,6 +244,6 @@
     \bibliographystyle{bstutf8}
     \phantomsection
     \addcontentsline{toc}{chapter}{参考文献}
-    \kaishu
+    \songti \zihao{5}
     \bibliography{#1}
 }
