@@ -136,8 +136,8 @@
     %\vspace*{5pt}
     \begin{minipage}[c][3cm][c]{\textwidth}
     	\begin{tabbing}
-    		\quad \qquad \zihao{4}分类号：\the\UDC  \hspace{6cm} \= 密级：\the\security \\
-    		\quad \qquad 学校代码：\the\schoolnumber        \>        学号：\the\mynumber
+    		\quad \qquad \zihao{5}分类号：\the\UDC  \hspace{6.9cm} \= \zihao{5}密级：\the\security \\
+    		\quad \qquad \zihao{5}学校代码：\the\schoolnumber        \>    \zihao{5}    学号：\the\mynumber
     	\end{tabbing}
     	
     \end{minipage}\\
