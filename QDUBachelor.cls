@@ -65,17 +65,18 @@
 }
 
 %chapter&section setting
-\renewcommand{\contentsname}{\hspace*{\fill}\zihao{3} 目\quad{}录\hspace*{\fill}}
+\renewcommand{\contentsname}{\hspace*{\fill}\zihao{-3} 目\quad{}录\hspace*{\fill}}
 \setcounter{secnumdepth}{3}
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
 \setlength\cftbeforetoctitleskip{0em}
-\ctexset { chapter = { format+={\zihao {-3}},beforeskip=0em,afterskip=1em} } 
-\ctexset { section = { format+={\raggedright \zihao {4}} } }
-\ctexset { subsection = { format+={\zihao {-4}} } }
-\ctexset { subsubsection = { indent={1pc},number={(\arabic {subsubsection})} } }
+\ctexset { chapter = { format+={\heiti \zihao {-3}},beforeskip=0em,afterskip=1em} } 
+\ctexset { section = { format+={\raggedright \heiti \zihao {4}} } }
+\ctexset { subsection = { format+={\heiti \zihao {-4}} } }
+\ctexset { subsubsection = {  format+={\heiti \zihao {-4}} ,indent={1pc},number={(\arabic {subsubsection})} } }
 
 %font setting
 \RequirePackage{xeCJK}
+\setCJKmainfont{SimSun}[AutoFakeBold,ItalicFont=KaiTi]
 %\RequirePackage{fontspec}
 %\setmainfont{Times New Roman}
 %\setCJKfamilyfont{xbsong}{SimSun}
@@ -146,19 +147,19 @@
     
     \centerline{\heiti \zihao{0}{专业硕士学位论文}}
     \vspace{60pt}
-    \centerline{\zihao{3} \the\title}
+    \centerline{\zihao{3} \textbf{\heiti \the\title}}
     \vspace{120pt}
     \centerline {
         \begin{tabular}{ b{3cm} >{\arraybackslash}b{7cm}}
-            \songti \zihao{-3}  {作者姓名：} & \makecell[c]{\songti \zihao{-3} \the\name} \\[-2pt]
+            \songti \zihao{4}  {作者姓名：} & \makecell[c]{\songti  \zihao{4} \the\name} \\[-2pt]
             \Xcline{2-2}{1pt} \\[0.1cm]
-            \songti \zihao{-3}  {指导教师：} & \makecell[c]{\songti \zihao{-3} \the\supervisor} \\[-2pt]
+            \songti \zihao{4}  {指导教师：} & \makecell[c]{\songti  \zihao{4} \the\supervisor} \\[-2pt]
             \Xcline{2-2}{1pt} \\[0.1cm]
-            \songti \zihao{-3} \ziju{2} {学科：} & \makecell[c]{\songti \zihao{-3} \the\major} \\[-2pt]
+            \songti \zihao{4} \ziju{2} {学科：} & \makecell[c]{\songti  \zihao{4} \the\major} \\[-2pt]
             \Xcline{2-2}{1pt} \\[0.1cm]
-            \songti \zihao{-3}  {培养单位：} & \makecell[c]{\songti \zihao{-3}\the\school} \\[-2pt]
+            \songti \zihao{4}  {培养单位：} & \makecell[c]{\songti  \zihao{4}\the\school} \\[-2pt]
             \Xcline{2-2}{1pt} \\[0.1cm]
-            \songti \zihao{-3} {答辩日期：} & \makecell[c]{\songti \zihao{-3} \the\date} \\[-2pt]
+            \songti \zihao{4} {答辩日期：} & \makecell[c]{\songti  \zihao{4} \the\date} \\[-2pt]
             \Xcline{2-2}{1pt} \\[0.1cm]
         \end{tabular}
     }
@@ -193,7 +194,7 @@
 \newenvironment{abstract}[1]{
     \thispagestyle{empty}
     \vspace*{1cm}
-    \centerline{\heiti \zihao{3} {摘\quad{}要}}
+    \centerline{\heiti \zihao{-3} {摘\quad{}要}}
     \setcounter{page}{1}
     \vspace{1.2cm}
     \keyword{#1}
@@ -206,13 +207,13 @@
 \newenvironment{abstractEn}[1]{
     \thispagestyle{empty}
     \vspace*{1cm}
-    \centerline{\heiti \zihao{3} \bf{Abstract}}
+    \centerline{\heiti \zihao{-3} \bf{Abstract}}
     \vspace{1.2cm}
     \keyword{#1}
 }{
     \\
     \vfill
-    \noindent \bf{Keywords} \varKeyword
+    \noindent \textbf{Keywords} \varKeyword
     \clearpage
 }
 
