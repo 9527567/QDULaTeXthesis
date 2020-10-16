@@ -147,7 +147,7 @@
     
     \centerline{\heiti \zihao{0}{专业硕士学位论文}}
     \vspace{60pt}
-    \centerline{\zihao{3} \textbf{\heiti \the\title}}
+    \centerline{\zihao{3} \heiti \the\title}
     \vspace{120pt}
     \centerline {
         \begin{tabular}{ b{3cm} >{\arraybackslash}b{7cm}}
@@ -230,15 +230,13 @@
     \addcontentsline{toc}{chapter}{附录} 
 }{\clearpage}
 
-%------------------------researcher-------------------------
-\newcommand{\researcher}[1]{
- \clearpage
+%------------------------achievement-------------------------
+\newenvironment{achievement}{
+\clearpage
 \chapter*{攻读学位期间的学术成果}
-\addcontentsline{toc}{chapter}{攻读学位期间的学术成果} 
-
-
-
+\addcontentsline{toc}{chapter}{攻读学位期间的学术成果}
 }{\clearpage}
+
 %------------------------ reference ------------------------
 \newcommand{\reference}[1] {
     \nocite{*}
