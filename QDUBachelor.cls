@@ -15,7 +15,7 @@
 \RequirePackage{hyperref} %PDF链接设置
 \hypersetup{pdfencoding=auto} 
  \ifprint
- \hypersetup{colorlinks,linkcolor=black,anchorcolor=black,citecolor=black}
+ \hypersetup{colorlinks,allcolor=black}
  \else
 \hypersetup{colorlinks,linkcolor=blue,anchorcolor=green,citecolor=magenta}
 \fi
