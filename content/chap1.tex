@@ -6,15 +6,28 @@
 
 引用文献\cite{刘海洋2013LATEX}。
 
-插入图片，如图\ref{fig:sample_figure}所示。
+插入图片，如图\ref{fig:sample_figure}所示。\par
 \begin{figure*}[htb]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/logo.png}
 \caption{插图样例}
 \label{fig:sample_figure}
 \end{figure*}
-
-插入表格，如表\ref{tab:sample_table}所示。
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[t]{0.35 \linewidth}
+		\centering
+		\includegraphics[width=\textwidth]{figures/logo.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.35 \linewidth}
+		\centering
+	\includegraphics[width= \textwidth]{figures/logo.png}
+	\caption{多图示例}
+	\label{multifig}
+\end{minipage}
+\end{figure}
+多图示例，如图\ref{multifig}所示。\par
+插入表格，如表\ref{tab:sample_table}所示。\par
 \begin{table}[htb]
 \centering
 \caption{表格样例}
