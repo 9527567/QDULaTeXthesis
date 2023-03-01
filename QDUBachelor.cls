@@ -22,6 +22,7 @@
 \usepackage{anyfontsize}
 \RequirePackage{fancyhdr}
 \usepackage{layout}
+\usepackage{ulem}
 %\RequirePackage{wallpaper} %用于封面元素对齐
 \RequirePackage{makecell}
 \RequirePackage{array} %绘制封面下划线
