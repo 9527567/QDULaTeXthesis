@@ -12,12 +12,15 @@
 \DeclareOption{forprint}{\printtrue}
 \ProcessOptions
 %------------------------ Packages ------------------------
-\RequirePackage{hyperref} %PDF链接设置
+\RequirePackage[backref]{hyperref} %PDF链接设置
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{gbt7714}
 \hypersetup{pdfencoding=auto} 
  \ifprint
- \hypersetup{colorlinks,allcolors=black}
+ \hypersetup{hidelinks,colorlinks=true,allcolors=black}
  \else
-\hypersetup{colorlinks,linkcolor=blue,anchorcolor=green,citecolor=magenta}
+\hypersetup{hidelinks,allcolors=black,colorlinks=true,linkcolor=blue,anchorcolor=pink,citecolor=magenta,urlcolor=red}
 \fi
 \usepackage{anyfontsize}
 \RequirePackage{fancyhdr}
@@ -37,7 +40,7 @@
 \RequirePackage{floatrow} %表格标题五号置顶
 \DeclareFloatFont{tblfont}{\zihao{5}}
 \floatsetup[table]{font=tblfont,capposition=top}
-\RequirePackage[super,square]{natbib} %引用格式设置为上标方括号
+%\RequirePackage[super,square]{natbib} %引用格式设置为上标方括号
 
 %head&foot setting
 \makeatletter
@@ -78,6 +81,7 @@
 %font setting
 \RequirePackage{xeCJK}
 \setCJKmainfont{SimSun}[AutoFakeBold,ItalicFont=KaiTi]
+\linespread{1.25}
 %\RequirePackage{fontspec}
 %\setmainfont{Times New Roman}
 %\setCJKfamilyfont{xbsong}{SimSun}
@@ -138,8 +142,8 @@
     %\vspace*{5pt}
     \begin{minipage}[c][3cm][c]{\textwidth}
     	\begin{tabbing}
-    		\quad \qquad \zihao{5}分类号：\the\UDC  \hspace{6.9cm} \= \zihao{5}密级：\the\security \\
-    		\quad \qquad \zihao{5}学校代码：\the\schoolnumber        \>    \zihao{5}    学号：\the\mynumber
+    		\quad \qquad \zihao{5} \heiti 分类号：\heiti \the\UDC  \hspace{6.9cm} \= \zihao{5} \heiti 密级：\heiti \the\security \\
+    		\quad \qquad \zihao{5} \heiti 学校代码：\heiti \the\schoolnumber        \>    \zihao{5}    \heiti 学号：\heiti \the\mynumber
     	\end{tabbing}
     	
     \end{minipage}\\
@@ -202,7 +206,7 @@
 }{
     \\
     ~~\vfill
-    \noindent \textbf{关键词} \varKeyword
+    \noindent \textbf{关键词：} \varKeyword
     \clearpage
 }
 \newenvironment{abstractEn}[1]{
@@ -214,7 +218,7 @@
 }{
     \\
     \vfill
-    \noindent \textbf{Keywords} \varKeyword
+    \noindent \textbf{Keywords:} \varKeyword
     \clearpage
 }
 
@@ -240,8 +244,8 @@
 
 %------------------------ reference ------------------------
 \newcommand{\reference}[1] {
-    \nocite{*}
-    \bibliographystyle{bstutf8}
+    %\nocite{*}
+    \bibliographystyle{gbt7714-numerical}
     \phantomsection
     \addcontentsline{toc}{chapter}{参考文献}
     \songti \zihao{5}
